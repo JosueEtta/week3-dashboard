@@ -1,0 +1,293 @@
+.page {
+  margin: 0;
+  background: #ffffff;
+  color: #1c1917;
+  font-family: "Chakra Petch", system-ui, sans-serif;
+}
+
+.header {
+  background: #ffffff;
+  color: #b91c1c;
+  border-bottom: 1px solid #fecaca;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+  box-sizing: border-box;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.field {
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 2px solid #b91c1c;
+  background: #ffffff;
+  color: #1c1917;
+  font: inherit;
+  font-size: 16px;
+}
+
+.field-search {
+  width: 280px;
+  max-width: 100%;
+  padding: 0 14px;
+}
+
+.field:focus-visible {
+  outline: 3px solid #1c1917;
+  outline-offset: 2px;
+}
+
+.field:disabled {
+  background: #f5f5f4;
+  color: #78716c;
+  cursor: not-allowed;
+}
+
+.error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #b91c1c;
+  border-radius: 10px;
+  color: #7f1d1d;
+}
+
+.error-text {
+  flex: 1 1 240px;
+  margin: 0;
+}
+
+.button {
+  height: 44px;
+  padding: 0 22px;
+  border: 2px solid #b91c1c;
+  border-radius: 10px;
+  background: #b91c1c;
+  color: #ffffff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #991b1b;
+}
+
+.button:focus-visible {
+  outline: 3px solid #1c1917;
+  outline-offset: 2px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-top: 3px solid #dc2626;
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.table-head {
+  border-bottom: 1px solid #fca5a5;
+}
+
+.cell {
+  padding: 10px 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cell-head {
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cell-image {
+  width: 88px;
+}
+
+.row {
+  border-bottom: 1px solid #fecaca;
+}
+
+.name {
+  font-family: "Russo One", sans-serif;
+  font-size: 18px;
+}
+
+.value {
+  font-weight: 600;
+}
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 3px 10px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 999px;
+  color: #991b1b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.thumb-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.thumb-loaded .thumb-img {
+  opacity: 1;
+}
+
+.skeleton {
+  border-color: #d6d3d1;
+  background: linear-gradient(90deg, #e7e5e4 25%, #d6d3d1 50%, #e7e5e4 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+.skeleton-line {
+  width: 80%;
+  height: 16px;
+  border-radius: 6px;
+}
+
+.skeleton-line-short {
+  width: 40%;
+}
+
+.empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: #57534e;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .main {
+    padding: 24px 16px 40px;
+  }
+
+  .controls {
+    justify-content: stretch;
+  }
+
+  .label {
+    flex: 1 1 100%;
+  }
+
+  .field,
+  .field-search {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .cell {
+    padding: 8px 10px;
+  }
+}

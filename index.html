@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header-inner">
+      <svg class="logo" viewBox="0 0 48 48" fill="none" stroke="#b91c1c" stroke-width="3" aria-hidden="true">
+        <circle cx="24" cy="24" r="21"/>
+        <path d="M3 24h13M32 24h13"/>
+        <circle cx="24" cy="24" r="7"/>
+      </svg>
+      <h1 class="title">Pokédex Dashboard</h1>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="controls" aria-label="Controls">
+      <label class="label" for="sort">Sort by</label>
+      <select class="field js-sort" id="sort">
+        <option value="name">Name</option>
+        <option value="hp">HP</option>
+        <option value="attack">Attack</option>
+      </select>
+      <select class="field js-type" aria-label="Type">
+        <option value="all">All types</option>
+      </select>
+      <input class="field field-search js-search" type="search" placeholder="Search" aria-label="Search by name" autocomplete="off">
+    </section>
+
+    <p class="visually-hidden" role="status"><span class="js-status"></span></p>
+
+    <div class="error is-hidden js-error" role="alert">
+      <p class="error-text js-error-text"></p>
+      <button class="button js-retry" type="button">Try again</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table js-table" aria-busy="true">
+        <thead>
+          <tr class="table-head">
+            <th class="cell cell-head cell-image" scope="col"><span class="visually-hidden">Image</span></th>
+            <th class="cell cell-head" scope="col">Name</th>
+            <th class="cell cell-head" scope="col">Types</th>
+            <th class="cell cell-head" scope="col">HP</th>
+            <th class="cell cell-head" scope="col">Attack</th>
+          </tr>
+        </thead>
+        <tbody class="js-rows"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
