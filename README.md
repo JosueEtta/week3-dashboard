@@ -26,6 +26,3 @@ ES modules only work through a server, so do not double-click `index.html`.
 - `js/ui.js`: rendering with `map`, loading and error states
 - `js/script.js`: `filter`, `sort`, `find` (in `api.js`), `reduce` (unique types and average HP)
 
-## Screenshot
-
-Add one screenshot here before submitting.
