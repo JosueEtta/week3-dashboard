@@ -2,6 +2,8 @@
 
 Week 3 assignment: API-Driven Mini Dashboard.
 
+**Created by:** Atabe Sikadi Josue Etta
+
 ## API used
 
 [PokéAPI](https://pokeapi.co/) (free, no key needed). The app loads the first 30 Pokémon and shows image, name, types, HP and attack.
